@@ -40,7 +40,13 @@ public class Pro_KaKao_실패율 {
                 // * 중요!!
                 // o1, o2 -> 오름차순 정렬 1, 2, 3 ...
                 // o2, o1 -> 내림차순 정렬 3, 2, 1 ...
-                return Double.compare(map.get(o2), map.get(o1));
+//                return Double.compare(map.get(o2), map.get(o1));
+                if(map.get(o1) < map.get(o2))
+                    return 1;
+                else if(map.get(o1) > map.get(o2))
+                    return -1;
+                else
+                    return 0;
             }
         });
 
