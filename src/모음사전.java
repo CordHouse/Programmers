@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Pro_KaKao_거리두기_확인하기 {
+public class 모음사전 {
     public static void main(String[] args) {
         String word = "AAAAE";
         System.out.println(solution(word));
