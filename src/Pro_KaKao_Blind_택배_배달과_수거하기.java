@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Pro_KaKao_택배_배달과_수거하기 {
+public class Pro_KaKao_Blind_택배_배달과_수거하기 {
     public static void main(String[] args) {
         int[] pickups = {0, 3, 0, 4, 0};
         List<Integer> pickupsList = Arrays.stream(pickups).boxed().toList();
