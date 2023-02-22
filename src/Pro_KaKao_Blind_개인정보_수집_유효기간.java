@@ -1,5 +1,5 @@
 import java.util.*;
-public class Pro_KaKao_Bilnd_개인정보_수집_유효기간 {
+public class Pro_KaKao_Blind_개인정보_수집_유효기간 {
 
     public static void main(String[] args) {
         String today = "2022.05.19";
