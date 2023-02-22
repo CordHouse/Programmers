@@ -1,5 +1,5 @@
 import java.util.*;
-public class Pro_KaKao_Bilnd_순위_검색 {
+public class Pro_KaKao_Blind_순위_검색 {
     static HashMap<String, List<Integer>> map = new HashMap<>();
 
     public static void main(String[] args){
