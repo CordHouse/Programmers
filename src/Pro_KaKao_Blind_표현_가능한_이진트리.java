@@ -8,60 +8,54 @@ public class Pro_KaKao_Blind_표현_가능한_이진트리 {
 
     public static int[] solution(long[] numbers) {
         int[] answer = {};
-        List<String> binaryNumbers = changeToBinary(numbers);
-        List<Integer> answerTemp = new LinkedList<>();
-        for(String binary : binaryNumbers) {
-            answerTemp.add(treeCheck(binary));
-        }
-        answer = answerTemp.stream().mapToInt(i -> i).toArray();
+        List<Integer> tempAnswer = changeBinary(numbers);
+        answer = tempAnswer.stream().mapToInt(i -> i).toArray();
         return answer;
     }
 
-    public static int treeCheck(String number) {
-        int centerPointer = number.length() / 2;
-        if(centerNumberCheck(number.toCharArray(), centerPointer)) {
-            return 0;
-        }
-        return cycle(number.toCharArray(), centerPointer - 1, centerPointer + 1);
-    }
-
-    public static int cycle(char[] number ,int left, int right) {
-        while(true){
-            left = left / 2;
-            right = right + left;
-            if(left == 0) {
-                break;
-            }
-            if(centerNumberCheck(number, left) || centerNumberCheck(number, right)) {
-                return 0;
-            }
-        }
-        return 1;
-    }
-
-    public static boolean centerNumberCheck(char[] number, int pointer) {
-        if(number[pointer] == '0') {
-            return true;
-        }
-        return false;
-    }
-
-    public static List<String> changeToBinary(long[] numbers) {
-        List<String> binaryNumbers = new LinkedList<>();
-        int n = 1;
-        for(long value : numbers) {
-            String binaryType = Long.toBinaryString(value);
+    public static List<Integer> changeBinary(long[] numbers) {
+        List<Integer> value = new LinkedList<>();
+        boolean check = false;
+        for(long number : numbers) {
+            String binary = Long.toBinaryString(number);
+            int n = 1;
             while(true) {
                 int max = (int) Math.pow(2, n) - 1;
-                if(binaryType.length() - max <= 0) {
-                    binaryType = "0".repeat(max-binaryType.length()) + binaryType;
+                if(binary.length() <= max) {
+                    binary = "0".repeat(max - binary.length()) + binary;
                     break;
                 }
                 n++;
             }
-            binaryNumbers.add(binaryType);
+            check = cycle(binary);
+
+            if(check) {
+                value.add(1);
+            } else {
+                value.add(0);
+            }
         }
-        return binaryNumbers;
+        return value;
+    }
+
+    public static boolean cycle(String number) {
+        int mid = number.length() / 2;
+        boolean value = true;
+        String left = number.substring(0, mid);
+        String right = number.substring(mid+1);
+        char[] charNumber = number.toCharArray();
+        if(charNumber[mid] == '0' && (left.charAt(left.length() / 2) == '1' || right.charAt(right.length() / 2) == '1')) {
+            return false;
+        }
+
+        if(left.length() >= 3) {
+            value = cycle(left);
+            if(value) {
+                value = cycle(right);
+            }
+        }
+
+        return value;
     }
 
 }
