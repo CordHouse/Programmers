@@ -89,13 +89,7 @@ public class Pro_KaKao_Blind_표_병합 {
                 return;
             }
             if(min == 0) {
-                for(int r = 1; r < 51; r++) {
-                    for(int c = 1; c < 51; c++) {
-                        if(tableNumber[r][c] == max) {
-                            table[r][c] = table[r2][c2];
-                        }
-                    }
-                }
+                noNumberCycle(max, table[r2][c2]);
                 tableNumber[r2][c2] = tableNumber[r1][c1];
                 return;
             }
@@ -117,13 +111,7 @@ public class Pro_KaKao_Blind_표_병합 {
                 return;
             }
             else if(max == 0) {
-                for(int r = 1; r < 51; r++) {
-                    for(int c = 1; c < 51; c++) {
-                        if(tableNumber[r][c] == min) {
-                            table[r][c] = table[r1][c1];
-                        }
-                    }
-                }
+                table[r2][c2] = table[r1][c1];
                 tableNumber[r1][c1] = tableNumber[r2][c2];
                 return;
             }
@@ -144,6 +132,16 @@ public class Pro_KaKao_Blind_표_병합 {
                 if(tableNumber[r][c] == min) {
                     table[r][c] = value;
                     tableNumber[r][c] = max;
+                }
+            }
+        }
+    }
+
+    public static void noNumberCycle(int compare, String value) {
+        for(int r = 1; r < 51; r++) {
+            for(int c = 1; c < 51; c++) {
+                if(tableNumber[r][c] == compare) {
+                    table[r][c] = value;
                 }
             }
         }
