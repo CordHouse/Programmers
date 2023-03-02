@@ -9,7 +9,6 @@ public class Pro_KaKao_Blind_표_병합 {
         String[] commands = {"UPDATE 1 1 menu", "UPDATE 1 2 category", "UPDATE 2 1 bibimbap", "UPDATE 2 2 korean", "UPDATE 2 3 rice", "UPDATE 3 1 ramyeon", "UPDATE 3 2 korean", "UPDATE 3 3 noodle", "UPDATE 3 4 instant", "UPDATE 4 1 pasta", "UPDATE 4 2 italian", "UPDATE 4 3 noodle", "MERGE 1 2 1 3", "MERGE 1 3 1 4", "UPDATE korean hansik", "UPDATE 1 3 group", "UNMERGE 1 4", "PRINT 1 3", "PRINT 1 4"};
         System.out.println(Arrays.toString(solution(commands)));
     }
-
     public static String[] solution(String[] commands) {
         init();
         for(String command : commands) {
@@ -90,11 +89,17 @@ public class Pro_KaKao_Blind_표_병합 {
                 return;
             }
             if(min == 0) {
-                table[r1][c1] = table[r2][c2];
-                tableNumber[r1][c1] = tableNumber[r2][c2];
+                for(int r = 1; r < 51; r++) {
+                    for(int c = 1; c < 51; c++) {
+                        if(tableNumber[r][c] == max) {
+                            table[r][c] = table[r2][c2];
+                        }
+                    }
+                }
+                tableNumber[r2][c2] = tableNumber[r1][c1];
                 return;
             }
-            cycle(min, max, table[r2][c2]);
+            cycle(max, min, table[r2][c2]);
         }
         else {
             if(tableNumber[r1][c1] == 0 && tableNumber[r2][c2] == 0) {
@@ -146,6 +151,4 @@ public class Pro_KaKao_Blind_표_병합 {
         }
         ans.add(table[r1][c1]);
     }
-
-
 }
