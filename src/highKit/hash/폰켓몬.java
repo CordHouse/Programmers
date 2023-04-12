@@ -1,3 +1,5 @@
+package highKit.hash;
+
 import java.util.*;
 public class 폰켓몬 {
     public static void main(String[] args) {
