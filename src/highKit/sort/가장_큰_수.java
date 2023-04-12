@@ -1,7 +1,9 @@
+package highKit.sort;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Pro_가장_큰_수 {
+public class 가장_큰_수 {
     public static void main(String[] args){
         int[] numbers = {0, 0, 0};
         System.out.println(solution(numbers));
