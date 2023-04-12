@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_Blind_주차_요금_계산 {
     public static void main(String[] args) {

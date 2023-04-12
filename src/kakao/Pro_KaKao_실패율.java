@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 
 public class Pro_KaKao_실패율 {

@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_두_큐_합_같게_만들기 {
     static long s1, s2;

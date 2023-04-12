@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_수식_최대화 {
     static List<List<String>> gihoPriority = new LinkedList<>();

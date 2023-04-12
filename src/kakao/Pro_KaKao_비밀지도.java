@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.Arrays;
 
 public class Pro_KaKao_비밀지도 {

@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_거리두기_확인하기 {
     static int[] vx = {-1, 1, 0, 0};

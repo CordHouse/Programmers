@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_Blind_이모티콘_할인행사 {
     private static int[][] globalUsers;

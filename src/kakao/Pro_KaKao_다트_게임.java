@@ -1,3 +1,5 @@
+package kakao;
+
 public class Pro_KaKao_다트_게임 {
     public static void main(String[] args){
         System.out.println(solution("1S2D*3T"));

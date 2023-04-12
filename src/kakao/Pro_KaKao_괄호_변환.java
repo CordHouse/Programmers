@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_괄호_변환 {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_Blind_양궁대회 {
     static int[] res = {-1}; // 응답

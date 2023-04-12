@@ -1,3 +1,5 @@
+package kakao;
+
 public class kakaoTest6 {
     public static void main(String[] args) {
 //        int alp =0;

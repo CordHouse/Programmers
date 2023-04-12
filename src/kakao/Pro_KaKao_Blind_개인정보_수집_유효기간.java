@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_Blind_개인정보_수집_유효기간 {
 

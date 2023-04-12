@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 
 public class Pro_KaKao_Blind_택배_배달과_수거하기 {

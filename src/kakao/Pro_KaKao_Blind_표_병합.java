@@ -1,3 +1,5 @@
+package kakao;
+
 import java.util.*;
 public class Pro_KaKao_Blind_표_병합 {
     private static String[][] table = new String[51][51];
