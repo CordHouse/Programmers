@@ -1,3 +1,5 @@
+package highKit.exhaustive_search;
+
 import java.util.*;
 public class 피로도 {
     static List<int[][]> changeDungeons = new LinkedList<>();

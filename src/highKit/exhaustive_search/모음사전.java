@@ -1,3 +1,5 @@
+package highKit.exhaustive_search;
+
 import java.util.*;
 
 public class 모음사전 {

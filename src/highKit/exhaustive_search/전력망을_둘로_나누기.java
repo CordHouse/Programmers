@@ -1,3 +1,5 @@
+package highKit.exhaustive_search;
+
 import java.util.*;
 public class 전력망을_둘로_나누기 {
     static int count;
