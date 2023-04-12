@@ -1,3 +1,5 @@
+package highKit.dfs_bfs;
+
 public class 타겟_넘버 {
     static int count = 0;
     public static void main(String[] args) {
